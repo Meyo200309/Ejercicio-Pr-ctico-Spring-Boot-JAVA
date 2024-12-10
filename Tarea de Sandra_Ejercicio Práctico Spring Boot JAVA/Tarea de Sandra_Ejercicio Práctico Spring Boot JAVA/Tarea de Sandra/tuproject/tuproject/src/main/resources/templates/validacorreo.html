@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Valida Correo</title>
+</head>
+<body>
+    <form action="#" th:action="@{/proyecto/validacorreo}" th:object="${correo}" method="post">
+        <input type="text" th:field="*{correo}" placeholder="Ingresa tu correo"/>
+        <button type="submit">Validar</button>
+    </form>
+    <p th:text="${resultado}"></p>
+</body>
+</html>
+

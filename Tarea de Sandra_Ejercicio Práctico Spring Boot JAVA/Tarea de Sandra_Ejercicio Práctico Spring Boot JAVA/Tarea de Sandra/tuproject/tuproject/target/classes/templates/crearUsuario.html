@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Registro Usuario</title>
+</head>
+<body>
+    <form action="#" th:action="@{/proyecto/crearUsuario}" th:object="${usuario}" method="post">
+        <input type="text" th:field="*{nombre}" placeholder="Nombre"/>
+        <input type="text" th:field="*{apellidoPaterno}" placeholder="Apellido Paterno"/>
+        <input type="text" th:field="*{apellidoMaterno}" placeholder="Apellido Materno"/>
+        <input type="number" th:field="*{edad}" placeholder="Edad"/>
+        <input type="email" th:field="*{correo}" placeholder="Correo"/>
+        <button type="submit">Guardar</button>
+    </form>
+    <p th:text="${mensaje}"></p>
+</body>
+</html>
